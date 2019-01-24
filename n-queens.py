@@ -1,7 +1,7 @@
 import copy
 
 def take_input():
-
+    """Accept the size of the chessboard"""
     while True:
         try:
             size = int(input('What is the size of the chessboard? n= \n'))
@@ -14,4 +14,16 @@ def take_input():
         except ValueError:
             print('Invalid value entered. Enter again')
 
-     
+def get_board(size):
+    """Returns a n by n board"""
+    board = [0]*size
+    for ix in range = [0]*size
+            board[ix] = [0]*size
+        return board
+
+def print_solutions(solutions, size):
+    """Prints solutions"""
+    for sol in solutions:
+        for row in sol:
+            print(row)
+        print()            
