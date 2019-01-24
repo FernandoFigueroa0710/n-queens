@@ -1,0 +1,13 @@
+language: python
+#language version
+python:
+  -"3.6"
+  -"3.6"-dev #development branch
+  #command to install dependencies
+install:
+  -pip install -r requiremets.txt
+  #Scripts
+script:
+  - pytest
+#Operating systems
+os: osx
