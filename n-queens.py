@@ -26,4 +26,20 @@ def print_solutions(solutions, size):
     for sol in solutions:
         for row in sol:
             print(row)
-        print()            
+        print()
+
+def is_safe(board, row, col, size):
+    """Check if it's safe to place a queen at board[x][y]"""
+
+    #check row on left side
+    for iy in range(col):
+        if board[row][iy] == 1:
+            return False
+
+    ix, iy = row, col
+    while ix >= 0 and iy >= 0:
+        if board[ix][iy] == 1
+            return False
+        jx+=1
+        jy-=1
+    return True
