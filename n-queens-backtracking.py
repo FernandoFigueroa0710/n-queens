@@ -43,3 +43,22 @@ def is_safe(board, row, col, size):
         jx+=1
         jy-=1
     return True
+
+def solve(board, col, size):
+    """Use backtracking to fins all the solutions"""
+    #base case
+    if col >= size:
+        return
+
+    for i in range(size):
+        if is_safe(board, i, col, size):
+            board[i][col] = 1
+            if col == size-1:
+                add_solution(board)
+                board[i][col] = 0
+                return
+            solve(board, col+1, size)
+            #backtrack
+            board[i][col] = 0
+
+        
